@@ -52,8 +52,16 @@ app.use(
 // })
 
 var CreateEvent = require('./routes/event_route.js')
+var notices = require('./routes/notice_route')
+var get_notices = require('./routes/get_notice')
+var get_complaints = require('./routes/get_complaint')
+var Like = require('./routes/Like')
 
 app.use('/createEvent', CreateEvent);
+app.use('/Create_Notice', notices);
+app.use('/', get_notices);
+app.use('/', get_complaints);
+app.use('/',Like);
 
 app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);

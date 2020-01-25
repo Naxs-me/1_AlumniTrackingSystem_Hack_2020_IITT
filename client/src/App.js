@@ -1,4 +1,5 @@
 import React from 'react';
+import Table from './components/Table';
 import './App.css';
 class App extends React.Component {
 
@@ -7,13 +8,10 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("in App : ");
     return (
-      <div>
-        <div>
-          <p>the app is running</p>
+        <div className = "Tablediv" >
+          <Table />
         </div>
-      </div>
     );
   }
 }

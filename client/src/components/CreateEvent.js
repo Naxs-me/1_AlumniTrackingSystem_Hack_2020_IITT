@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { Form, Container } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import '../App.css';
+import NavigationBar from './Navigation_Bar';
 import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 class Create_Event extends Component {
@@ -102,7 +103,10 @@ class Create_Event extends Component {
     }
 
     render() {
+        console.log("Hi");
         return (
+            <div>
+            <NavigationBar />
             <div>
                 <Container className="Login">
                     <Form onSubmit = {this.onSubmit}>
@@ -147,6 +151,7 @@ class Create_Event extends Component {
                         </Button>
                     </Form>
                 </Container>
+            </div>
             </div>
         );
     }

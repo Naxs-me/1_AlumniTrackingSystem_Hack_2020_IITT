@@ -1,18 +1,38 @@
 .App {
   text-align: center;
 }
-
+h2
+{
+  color: red;
+}
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Login{
+  border-radius: 15px;
+  align-content: center;
+  align-self: auto;
+  background-color: rgb(0, 10, 10);
+  padding-top: 1%;
+  padding-bottom:1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 3%; 
+  margin-bottom: 2.5%;
+  width: 50%;
 }
-
+.AboutUs{
+  border-radius: 25px;
+  margin-top: 5%;
+  padding-top:3%;
+  padding-bottom:3%;
+  font-size: 20px;
+  color: white;
+  width:60%; 
+  background:black;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +55,287 @@
   to {
     transform: rotate(360deg);
   }
+}
+.logo {
+  width: 80%;
+  padding-right: 0em;
+  height: 2.3em;
+}
+.logoy {
+  width: 20%;
+  padding-right: 0em;
+  height: 2.3em;
+}
+.navtext{
+  font-size:20px;
+  padding-left: 55px;
+}
+.navbar{
+  background-color: black;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.navbar Nav.Link {
+  display:inline-block;
+  width: 90%;   
+}
+.navtext Nav.Link:hover {
+  color: red;
+}
+.header{
+  font-size: 2em;
+  color:red;
+}
+.footer{
+  font-size: 1em;
+  color:white;
+}
+.footer br{
+  color: white;
+}
+.formBasic{
+  color: white;
+  font-size: 1.5em;
+}
+.formBasic1 input{
+  color: white;
+  font-size: 1em;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 5%;
+}
+#try{
+  color: white;
+  font-size: 1em;
+}
+
+.withtable
+{
+  margin-top: 6%;
+  border : 2px ridge red;
+  align-self : center;
+  color: red;
+  background-color: black;
+  border-radius:15px;
+  width: 80%;
+  height: 400px;
+  overflow-y: scroll;
+  scrollbar-width: 1em;
+}
+.withtable::-webkit-scrollbar
+{
+ display: none;
+}
+.withtable table{
+  color: white;
+}
+.withtable table tr:hover{
+  color: red;
+} 
+.Tablediv
+{
+  border-radius: 15px;
+  /* margin-top: 5%; */
+}
+.Actual
+{
+  color:red;
+}
+.Contact_table
+{
+  /* margin-top: 10%; */
+  width: 80%;
+  align-self: auto;
+  align-content: center;
+  align-items: center;
+}
+.Contact_table td
+{
+  color: white;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Contact_table td:hover
+{
+  color: red;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.start
+{
+  width: 70%;
+  background-color: #000000;
+  border-radius: 15px;
+  margin-top: 10%;
+}
+.start h2
+{
+  color: white;
+}
+#check
+{
+  color: white;
+}
+#check:hover{
+  font-weight: 600;
+  color: red;
+  text-decoration: none;
+}
+#che
+{
+  color: white;
+}
+#che:hover
+{
+  font-weight: 600;
+  text-decoration: none;
+  color: red;
+}
+#ch:hover{
+  text-decoration: none;
+}
+#ch
+{
+  color: white;
+}
+#chb:hover
+{
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  font-weight: 600;
+}
+.start h2
+{
+  color:red;
+}
+.withtable th
+{
+  color: red;
+}
+#check1
+{
+  padding-right: 2em;
+  color: white;
+}
+.userName
+{
+  color: yellow;
+  font-weight: 800;
+  font-size: 129%;
+  align-content: flex-start;
+  padding-right:30%;
+  display: inline; 
+  /* display:flex;
+  justify-content:space-between; */
+
+}
+
+.problem{
+  align-content: flex-start;
+  padding-right:30%;
+  display: inline; 
+  /* display:flex;
+  justify-content:space-between; */
+
+}
+.timeStamp
+{
+  align-content: flex-end;
+  padding-left:30%;
+  display: inline; 
+  /* display:flex;
+  justify-content:space-between; */
+}
+.bigDiv
+{
+  padding-left: 10px;
+  width: 100%;
+  padding-bottom: 1%;
+}
+.newTable
+{
+  width: 100%;
+}
+#tr1
+{
+  margin-top: 20%;
+  border-bottom: 2px ridge red; 
+  margin-bottom: 20%;
+}
+#h21
+{
+  border-bottom: 3px ridge white;
+  padding-bottom: 5px;
+}
+#keepcenter
+{
+  margin-top: 5%;
+}
+.formBasic increaseHeight
+{
+  height: 10%;
+}
+
+.popup {  
+  position: fixed;  
+  width: 50%;  
+  height: 70%;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  margin: auto;  
+  background-color: rgba(0,0,0, 1); 
+  border-radius: 15px; 
+  border: 2px ridge yellow;
+  box-shadow: 10px 10px 2000px 1000px rgba(0,0,0,0.15);
+  padding: 10px;
+  padding-bottom: 20px;
+}  
+.popup\_inner {  
+  position: absolute;  
+  left: 25%;  
+  right: 25%;  
+  top: 25%;  
+  bottom: 25%;  
+  margin: auto;  
+  border-radius: 20px;  
+  background: white;  
+}
+.backblur
+{
+  height: 100%;
+  width: 100%;
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.popup_header
+{
+  border-bottom: 1px ridge white;
+}
+.alignend
+{
+  align-content: flex-end;
+  align-items: flex-end;
+}
+.buttonend
+{
+  margin-left: 90%;
+}
+.buttonend:hover
+{
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  font-weight: 600;
+}
+.table_button
+{
+  padding-top: 10px;
 }

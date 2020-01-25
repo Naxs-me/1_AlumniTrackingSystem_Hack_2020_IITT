@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import CreateEvent from './components/CreateEvent';
+import CreateNotice from './components/Create_Notice';
+import Event from './components/Table';
+import Notice from './components/Table1';
+import Dash from './App';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
 
@@ -9,6 +13,10 @@ const routing = (
     <Router>
       <Switch>
         <Route path="/createEvent" component={CreateEvent} />
+        <Route path="/createNotice" component={CreateNotice} />
+        <Route path="/Notice" component={Notice} />
+        <Route path="/Event" component={Event} />
+        <Route path="/" component={Dash} />
       </Switch>
     </Router>
   );

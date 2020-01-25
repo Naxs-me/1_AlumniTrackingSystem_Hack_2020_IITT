@@ -1,28 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let eventData = new Schema({
-    EventName: {
+let noticeData = new Schema({
+    NoticeName: {
         type: String,
         required: true
     },
-    Event_desc: {
-        type: String,
-        required: true
-    },
-    Location: {
-        type: String,
-        required: true
-    },
-    Contact: {
-        type: Number,
-        required: true
-    },
-    Date: {
-        type: String,
-        required: true
-    },
-    Time: {
+    Notice_desc: {
         type: String,
         required: true
     },
@@ -31,6 +15,10 @@ let eventData = new Schema({
         required: true,
         default: "Active"
     },
+    // Type: {
+    //     type: String,
+    //     default: "Public"
+    // },
     Like: {
         type: Number,
         default: 0
@@ -58,4 +46,4 @@ let eventData = new Schema({
 // }
 
 
-module.exports = mongoose.model('EventData', eventData);
+module.exports = mongoose.model('NoticeData', noticeData);
