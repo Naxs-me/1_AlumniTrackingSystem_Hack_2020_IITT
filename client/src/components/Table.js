@@ -15,7 +15,7 @@ class Tables extends Component {
 
     createTable = () => {
         let table = []
-        console.log("data is he==re");
+        console.log("data is here");
         // console.log(this.state.tableData)
         console.log(this.state.pageTable)
         for (let i = 0; i < this.state.pageTable.length; i++) {

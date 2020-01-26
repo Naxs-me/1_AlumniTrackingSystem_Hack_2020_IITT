@@ -5,6 +5,7 @@ import CreateEvent from './components/CreateEvent';
 import CreateNotice from './components/Create_Notice';
 import Event from './components/Table';
 import Notice from './components/Table1';
+import Register from './components/Register';
 import Dash from './App';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
@@ -16,7 +17,9 @@ const routing = (
         <Route path="/createNotice" component={CreateNotice} />
         <Route path="/Notice" component={Notice} />
         <Route path="/Event" component={Event} />
-        <Route path="/" component={Dash} />
+        <Route path="/Dash" component={Dash} />
+        <Route path="/register" component={Register} />
+        <Route path="/" component={Notice} />
       </Switch>
     </Router>
   );
