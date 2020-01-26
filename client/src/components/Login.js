@@ -91,7 +91,7 @@ class LoginPage extends Component {
       .then(res => {
         console.log(res.data);
         if (res.data.status) {
-          console.log(this.props);
+          //console.log(this.props);
           console.log("res.data.session");
           console.log(res.data.session);
           localStorage.setItem("userName", res.data.session.user.collegeName);

@@ -8,8 +8,10 @@ import Notice from './components/Table1';
 import Register from './components/Register';
 import Dash from './App';
 import Login from './components/Login';
+import CollegeList from './components/collegeList';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
+import { Col } from 'react-bootstrap';
 
 const routing = (
     <Router>
@@ -19,6 +21,7 @@ const routing = (
         <Route path="/Notice" component={Notice} />
         <Route path="/Event" component={Event} />
         <Route path="/Dash" component={Dash} />
+        <Route path="/loginhome" component={CollegeList} />
         <Route path="/register" component={Register} />
         <Route path="/" component={Login} />
       </Switch>

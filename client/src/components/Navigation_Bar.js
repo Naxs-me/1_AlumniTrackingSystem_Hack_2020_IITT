@@ -59,9 +59,10 @@ class NavBar extends Component {
             <Nav className="mr-auto">
 
               <div className="navtext"><Link to="/" id="che">Home</Link></div>
-              <div className="navtext"><Link to="/AboutUs" id="che">About Us</Link></div>
+              <div className="navtext"><Link to="/Chat" id="che">Chat</Link></div>
               <div className="navtext"><Link to="/Event" id="che">Events</Link></div>
               <div className="navtext"><Link to="/Notice" id="che">Notices</Link></div>
+              <div className="navtext"><Link to="/Search" id="che">Search</Link></div>
               {/* <div className="navtext"><Link to="/Lodge" id="che">Lodge Complaint</Link></div> */}
             </Nav>
             <text id="check1">Welcome {`${localStorage.getItem("userName")}`}</text>
