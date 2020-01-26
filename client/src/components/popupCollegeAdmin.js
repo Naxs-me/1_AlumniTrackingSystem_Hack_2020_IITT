@@ -7,25 +7,10 @@ class Popup extends React.Component {
 
     constructor(props) {
         super(props);
-        this.onLike = this.onLike.bind(this);
         this.state = {
-            Event: JSON.parse(localStorage.getItem("Name"))
+            Status: JSON.parse(localStorage.getItem("Name"))
         }
-        //console.log("Popup Problem");
-       // console.log(this.state.Problem);
     }
-
-    onLike(e){
-        e.preventDefault();
-        console.log("like");
-        axios.post('http://localhost:4000/like', {id:this.state.Event["_id"]})
-      .then(res => {
-        console.log("printf");
-        console.log(res.data);
-        this.setState({Event: res.data});
-        localStorage.setItem("Name",JSON.stringify(res.data));
-        console.log(toString(localStorage.getItem("userData")));
-    });}
 
     render() {
         return (
@@ -36,28 +21,45 @@ class Popup extends React.Component {
                             <Button onClick={this.props.closePopup} variant="outline-light" type="submit" className="buttonend">X</Button>
                         </div>
                         <div className="popup_header">
-                            <h3>{`${this.state.Event["collegeName"]}`}</h3>
+                            <h3>{`${this.state.Status["name"]}`}</h3>
                             <br/>
                         </div>
                         <br/>
                         <div>
                             <p>
-                                Registration number:{`${this.state.Event["collegeNo"]}`}
+                                College Name: {`${this.state.Status["collegeName"]}`}
                             </p>
                         </div>
                         <div>
                             <p>
-                                Address: {`${this.state.Event["address"]}`}
+                                Department: {`${this.state.Status["dept"]}`}
                             </p>
                         </div>
                         <div>
                             <p>
-                                ContactNo: {`${this.state.Event["contactNo"]}`}
+                                Passout(Year): {`${this.state.Status["passout"]}`}
                             </p>
                         </div>
-                        <Button variant="outline-light" type="submit" id="chb" > Join</Button>
+                        <div>
+                            <p>
+                                Degree: {`${this.state.Status["degree"]}`}
+                            </p>
+                        </div>
+                        <br/>
+                        <div>
+                            <p>
+                                Email: {`${this.state.Status["email"]}`}
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Contact Number: {`${this.state.Status["contactNo"]}`}
+                            </p>
+                        </div>
                         <div className="popup_header"></div>
                         <br/>
+                        
+                        
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ import Register from './components/Register';
 import Query1 from './components/Query1';
 import Dash from './App';
 import Login from './components/Login';
+import CollegeAdmin from './components/TableCollegeAdmin'
 import CollegeList from './components/collegeList';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';

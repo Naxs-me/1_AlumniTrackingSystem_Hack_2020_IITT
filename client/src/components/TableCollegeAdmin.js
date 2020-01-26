@@ -4,7 +4,7 @@ import '../App.css';
 import { Component } from 'react';
 import axios from 'axios';
 import NavigationBar from './Navigation_Bar';
-import Popup from './popup';
+import Popup from './popupCollegeAdmin';
 import { Button } from 'react-bootstrap';
 var tableData = [];
 var id = 0;
@@ -22,27 +22,20 @@ class Tables extends Component {
             let children = []
             let children2 = []
             console.log("Marker");
-            console.log(this.state.pageTable[i]["Name"]);
+            console.log(this.state.pageTable[i]["name"]);
             if (this.state.pageTable[i]) {
                 children.push(<td>
                     <div className="bigDiv">
                         <div className="bigDiv1">
-                            <span className="timeStamp">{`${this.state.pageTable[i]["EventName"]}`}</span>
+                            <span className="userName">{`${this.state.pageTable[i]["college"]}`}</span>
+                            <span className="timeStamp">{`${this.state.pageTable[i]["Status"]}`}</span>
                         </div>
                         <div>
-                            <span className="problem">{`${this.state.pageTable[i]["Event_desc"]}`}</span>
+                            <span className="problem">{`${this.state.pageTable[i]["userEmail"]}`}</span>
 
                         </div>
                         <div className = "table_button">
-                            <Button variant="outline-light" type="submit" id="chb" onClick={this.togglePopup.bind(this,this.state.pageTable[i])}> More Details</Button>
-
-                            {this.state.showPopup ?
-                                <Popup
-                                    text='Click "Close Button" to hide popup'
-                                    closePopup={this.togglePopup.bind(this,this.state.pageTable[i])}
-                                />
-                                : null
-                            }
+                            <Button variant="outline-light" type="submit" id="chb" onClick={this.togglePopup.bind(this,this.state.pageTable[i])}> Accept</Button>
                             <div></div>
                             <div></div>
                             <div></div>
@@ -79,7 +72,7 @@ class Tables extends Component {
     }
 
     componentWillMount() {
-        axios.post('http://localhost:4000/get')
+        axios.post('http://localhost:4000/collegeAdmin/get')
             .then(res => {
                 console.log(res.data);
                 this.setState({ pageTable: res.data });

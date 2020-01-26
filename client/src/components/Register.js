@@ -178,6 +178,11 @@ export default class Register extends Component {
                 collegeName: this.state.collegeName
             };
 
+            const newStatus = {
+                userEmail: this.state.email,
+                college: this.state.collegeName
+            }
+
             if (this.state.password1 !== this.state.password2) {
                 alert("Passwords do not match!!");
             }
@@ -201,7 +206,12 @@ export default class Register extends Component {
                 console.log(`Form submitted:`);
                 console.log(`Name: ${this.state.name}`);
                 console.log(`Email: ${this.state.email}`);
+
+                axios.post('http://localhost:4000/register/addStatus', newStatus);
+
             }
+
+
         }
 
         this.setState({
