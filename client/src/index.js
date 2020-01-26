@@ -7,6 +7,7 @@ import Event from './components/Table';
 import Notice from './components/Table1';
 import Register from './components/Register';
 import Dash from './App';
+import Login from './components/Login';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ const routing = (
         <Route path="/Event" component={Event} />
         <Route path="/Dash" component={Dash} />
         <Route path="/register" component={Register} />
-        <Route path="/" component={Notice} />
+        <Route path="/" component={Login} />
       </Switch>
     </Router>
   );

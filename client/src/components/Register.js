@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 import './../App.css';
 
@@ -149,6 +150,7 @@ export default class Register extends Component {
                         if (res.status) {
                             localStorage.setItem("collegeNo", newCollege.collegeNo);
                             localStorage.setItem("email", newCollege.email);
+                            localStorage.setItem("userName", newCollege.collegeName);
                             console.log("Tryng to redirect");
                             this.setState({
                                 redirect: true
@@ -185,7 +187,7 @@ export default class Register extends Component {
                     .then(res => {
                         console.log(res.data);
                         if (res.status) {
-                            localStorage.setItem("name", newUser.name);
+                            localStorage.setItem("userName", newUser.name);
                             localStorage.setItem("email", newUser.email);
                             console.log("Tryng to redirect");
                             this.setState({
@@ -218,6 +220,9 @@ export default class Register extends Component {
         })
     }
     render() {
+        if (this.state.redirect) {
+            return <Redirect to="/Dash" />
+          }
         return (
 
             <div>
@@ -396,7 +401,7 @@ export default class Register extends Component {
                                     </div>
                                 </div>
                                 <div
-                                    className="tab-pane active fade show"
+                                    className="tab-pane"
                                     id="college"
                                     role="tabpanel"
                                     aria-labelledby="college-tab"

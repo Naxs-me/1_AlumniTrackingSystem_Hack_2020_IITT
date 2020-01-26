@@ -14,7 +14,7 @@ function getCollege(u,req,res,callback){
     email: req.body.email,
     password: req.body.password,
     address: req.body.address,
-    contact: req.body.contact,
+    contactNo: req.body.contact,
   });
 
   callback(u,res);
@@ -24,7 +24,7 @@ function getCollege(u,req,res,callback){
 signUpRoutes.route('/addCollege').post(function (req, res) {
   console.log("hello");
   var u;
-  College.findOne({name: req.body.name}, function(err,college){
+  College.findOne({name: req.body.collegeName}, function(err,college){
     if(college){
       var err = new Error("Name is already taken.");
       err.status = 400;
