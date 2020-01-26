@@ -56,12 +56,20 @@ var notices = require('./routes/notice_route')
 var get_notices = require('./routes/get_notice')
 var get_complaints = require('./routes/get_complaint')
 var Like = require('./routes/Like')
+var registerCollegeRoute = require('./routes/register_college_route')
+var registerUserRoute = require('./routes/register_user_route')
+var loginAlumni = require('./routes/login_alumni')
+var loginCollege = require('./routes/login_college')
 
 app.use('/createEvent', CreateEvent);
 app.use('/Create_Notice', notices);
 app.use('/', get_notices);
 app.use('/', get_complaints);
 app.use('/',Like);
+app.use('/register',registerCollegeRoute);
+app.use('/register',registerUserRoute);
+app.use('/Login',loginAlumni);
+app.use('/Login',loginCollege);
 
 app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);

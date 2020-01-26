@@ -5,9 +5,10 @@ import CreateEvent from './components/CreateEvent';
 import CreateNotice from './components/Create_Notice';
 import Event from './components/Table';
 import Notice from './components/Table1';
-import { Button } from 'react-bootstrap';
-import Dash from './App';
+import Register from './components/Register';
 import Query1 from './components/Query1';
+import Dash from './App';
+import Login from './components/Login';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom';
 
@@ -18,7 +19,10 @@ const routing = (
         <Route path="/createNotice" component={CreateNotice} />
         <Route path="/Notice" component={Notice} />
         <Route path="/Event" component={Event} />
-        <Route path="/" component={Query1} />
+        <Route path="/Dash" component={Dash} />
+        <Route path="/register" component={Register} />
+        <Route path="/Query1" component = {Query1} />
+        <Route path="/" component={Login} />
       </Switch>
     </Router>
   );
