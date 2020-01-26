@@ -74,7 +74,7 @@ class Tables extends Component {
     }
 
     componentWillMount() {
-        axios.post('http://localhost:4000/get')
+        axios.post('http://localhost:4000/post')
             .then(res => {
                 console.log(res.data);
                 this.setState({ pageTable: res.data });

@@ -21,7 +21,8 @@ class Tables extends Component {
         for (let i = 0; i < this.state.pageTable.length; i++) {
             let children = []
             let children2 = []
-
+            console.log("Marker");
+            console.log(this.state.pageTable[i]["Name"]);
             if (this.state.pageTable[i]) {
                 children.push(<td>
                     <div className="bigDiv">

@@ -8,7 +8,7 @@ get_complaintRoutes.use(cors())
 
 process.env.SECRET_KEY = 'secret';
  
-get_complaintRoutes.route('/get').post(function(req, res) {
+get_complaintRoutes.route('/post').post(function(req, res) {
     console.log("get complaint");
     Complaints.find({Status:"Active"},function(err, complaints){
         return res.send(complaints);
