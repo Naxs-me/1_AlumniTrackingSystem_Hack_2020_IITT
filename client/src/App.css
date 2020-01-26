@@ -57,14 +57,14 @@ h2
   }
 }
 .logo {
-  width: 80%;
+  width: 50%;
   padding-right: 0em;
-  height: 2.3em;
+  height: 3em;
 }
 .logoy {
   width: 20%;
   padding-right: 0em;
-  height: 2.3em;
+  height: 3em;
 }
 .navtext{
   font-size:20px;
@@ -259,6 +259,7 @@ h2
 {
   width: 100%;
 }
+
 #tr1
 {
   margin-top: 20%;

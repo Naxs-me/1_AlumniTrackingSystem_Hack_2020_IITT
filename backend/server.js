@@ -61,6 +61,7 @@ var registerUserRoute = require('./routes/register_user_route')
 var loginAlumni = require('./routes/login_alumni')
 var loginCollege = require('./routes/login_college')
 var collegeList = require('./routes/collegeList_route') 
+var alumniList = require('./routes/alumniList_route')
 
 app.use('/createEvent', CreateEvent);
 app.use('/Create_Notice', notices);
@@ -72,6 +73,7 @@ app.use('/register',registerUserRoute);
 app.use('/Login',loginAlumni);
 app.use('/Login',loginCollege);
 app.use('/loginhome',collegeList);
+app.use('/Search', alumniList);
 
 app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);

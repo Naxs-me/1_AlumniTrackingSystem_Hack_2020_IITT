@@ -24,7 +24,7 @@ const routing = (
         <Route path="/Dash" component={Dash} />
         <Route path="/loginhome" component={CollegeList} />
         <Route path="/register" component={Register} />
-        <Route path="/Query" component = {Query1} />
+        <Route path="/Search" component = {Query1} />
         <Route path="/" component={Login} />
       </Switch>
     </Router>

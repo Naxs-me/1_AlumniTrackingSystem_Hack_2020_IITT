@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 //import {FormControl} from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
-//import logo from '../project_logo.JPG';
+import logo from '../atslogo.JPG';
 import { Image } from 'react-bootstrap';
 import axios from 'axios';
 import '../App.css';
@@ -51,13 +51,13 @@ class NavBar extends Component {
       //console.log("IN NAVBAR : ",this.props.session);
       return (
         <Navbar expand="lg" variant="dark" className="navbar" >
-          {/* <Navbar.Brand href="/" className="logoy">
+          <Navbar.Brand href="/" className="logoy">
             <Image src={logo} alt="logo_p" className="logo" />
-          </Navbar.Brand> */}
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-
+              <div><a className="navbar-brand" href="#"><img src="../atslogo.JPG" alt="" /></a></div>
               <div className="navtext"><Link to="/" id="che">Home</Link></div>
               <div className="navtext"><Link to="/Chat" id="che">Chat</Link></div>
               <div className="navtext"><Link to="/Event" id="che">Events</Link></div>
