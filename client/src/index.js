@@ -21,7 +21,7 @@ const routing = (
         <Route path="/Event" component={Event} />
         <Route path="/Dash" component={Dash} />
         <Route path="/register" component={Register} />
-        <Route path="/Query1" component = {Query1} />
+        <Route path="/Query" component = {Query1} />
         <Route path="/" component={Login} />
       </Switch>
     </Router>
